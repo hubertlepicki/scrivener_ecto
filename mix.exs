@@ -42,11 +42,12 @@ defmodule Scrivener.Ecto.Mixfile do
   defp deps do
     [
       {:scrivener, "~> 2.4"},
-      {:ecto, git: "https://github.com/elixir-ecto/ecto.git"},
+      {:ecto, "3.0.0-rc.1"},
+      {:ecto_sql, "3.0.0-rc.0"},
       {:dialyxir, "~> 0.5.0", only: :dev},
       {:earmark, ">= 0.0.0", only: :dev},
       {:ex_doc, "~> 0.18.0", only: :dev},
-      {:postgrex, "~> 0.14.0-dev", github: "elixir-ecto/postgrex", ref: "6cabc3b"}
+      {:postgrex, "0.14.0-rc.1", only: :test, override: true}
     ]
   end
 
